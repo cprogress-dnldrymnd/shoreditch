@@ -1,0 +1,1006 @@
+<?php
+/**
+ * Template Name: Wedding Suppliers
+ * 
+ * */
+
+?>
+
+<style>
+	.customContainer {
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding-left: 1.5rem;
+	  padding-right: 1.5rem;
+	}
+
+	@media screen and (min-width: 768px) {
+	  .customContainer {
+		  padding-left: 93px;
+		  padding-right: 93px;
+	  }
+	}
+	
+	.qodef-content-grid {
+		width: unset !important;
+	}
+	#qodef-page-footer.qodef--footer-logo-area #qodef-page-footer-logo-area{
+		display:none;
+	}
+	#qodef-page-header{
+		display:none !important;
+	}
+	#qodef-page-mobile-header {
+		display:none !important;
+	}
+	#qodef-page-inner {
+		padding: 0 !important;
+	}
+	.customHeaderWrapper {
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+	.customHeader {
+		padding:30px 0;
+	}
+	@media screen and (max-width:1120px){
+		.customHeader {
+		padding:20px 0;
+		}
+	}
+	.btn.weddingBtn:hover {
+		color:white !important;
+		background-color:black;
+		transition:.3s ease-in-out;
+	}
+	@media screen and (max-width:1080px){
+		.btn.weddingBtn {
+			display:none;
+		}	
+	}
+	.singleStudiobanner {
+		height:90vh;
+		position: relative;
+	}
+	.singleStudiobanner img {
+		object-fit: cover;
+		position:absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height:100%;
+	}
+	.singleStudiobanner .bannerTitle{
+		height:80%;
+		z-index: 1;
+		position:relative;
+		display:grid;
+		place-items:center;
+		color:white;
+	}
+	.singleStudiobanner .bannerTitle h1{ 
+		 font-size: clamp(40px, 10vw, 150px);
+	}
+	.singleStudiobanner .bannerContact{
+		height:20%;
+		z-index: 1;
+		position:relative;
+	}
+	.flex {
+		display:flex;
+	}
+	@media screen and (max-width: 1080px) {
+		.flex {
+			flex-direction:column;
+			gap:20px !important; 
+		}
+		.singleStudiobanner .bannerTitle{
+			height:70%;	
+		}
+	}
+	#qodef-grid-inner {
+		align-items:center;
+	}
+	
+	
+	
+	.videoSlider {
+		padding: 80px 80px;
+		position:relative;
+		text-align:center;
+	}
+	@media screen and (max-width: 1080px) {
+		.videoSlider {
+			padding: 80px 30px;
+		}
+	}
+
+	.videoSlider h2 {
+		color:black;
+		font-size:clamp(36px,5vw,52px);
+		font-weight:500;
+		margin-bottom:100px;
+	}
+	.videoSlider .tns-outer {
+		position:relative;
+	}
+	.videoSlider .tns-controls button:first-child {
+		position: absolute;
+		top:50%;
+		left:-30px;
+		transform:translatey(-50%);
+		z-index: 1;
+	}
+	.videoSlider .tns-controls button:last-child {
+		position: absolute;
+		top:50%;
+		right:-30px;
+		transform:translatey(-50%);
+		z-index: 1;
+	}
+	
+	@media screen and (max-width:1020px){
+		.videoSlider iframe{
+			height: 400px !important;
+		}
+	}
+	.sliderClientTestimonials {
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr;
+		grid-gap:20px;
+	}
+	.coupleTestimonials .tns-controls {
+		position:absolute;
+		bottom:0;
+		display:block !important;
+		place-items:center;
+		left:50%;
+		transform:translatex(-50%);
+	}
+
+		
+	.coupleTestimonials {
+		position:relative;
+		color:black;
+		padding:80px 0;
+	}
+	.coupleTestimonials h3{
+		color:black;
+		font-size:36px;
+	}
+	.coupleTestimonials h2{
+		font-size:clamp(36px,5vw,52px);
+		font-weight:500;
+		color:black;
+		text-align:center;
+		margin-bottom:30px;
+	}
+	.sliderItemClientTestimonials {
+		
+		border:1px solid #E0E0E0;
+	}
+	.sliderItemClientTestimonials img{
+		width:100%;
+	}
+	.clientTestimonialsContent {
+		padding:20px;
+	}
+		.seperatorNav .arrowSVG svg {
+			fill:black !important;
+			cursor:pointer;
+		}
+		
+		.arrowSVG svg rect {
+			width:115px;
+		}
+		.arrowSVG svg path {
+			transform: translatex(-13px);
+			transition: 0.3s ease-in-out;
+		}
+		
+		.nextPost:hover .arrowSVG svg path {
+			transform: translatex(0);
+			transition: 0.3s ease-in-out
+		}
+	
+	@media screen and (max-width:1080px){
+		.nextPost {
+			text-align:center;
+		}
+		.seperatorWrapper {
+			align-items:center;
+		}
+	}
+	.nextPost {
+		display:flex;
+	}
+	.nextPost h3{
+		font-size: clamp(32px, 3vw, 52px);
+	}
+	.arrowImg {
+		display:none;
+	}
+	@media screen and (max-width:768px){
+		.arrowImg {
+			display:block;
+		}
+	}
+	
+
+		.cta {
+		height: 473px;
+		background-image: url('https://shoreditch.theprogressteam.com/wp-content/uploads/2025/04/Group-24.jpg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.cta .cta-wrapper {
+		display: grid;
+		place-items:center;
+		height:100%;
+	}
+
+		.cta .cta-wrapper > div {
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			width:100%;
+		}
+
+	.cta-content p {
+		text-transform: uppercase;
+		font-size: 3rem;
+		font-size: 500;
+	}
+
+	.cta-content h3 {
+	   font-size: 104px;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+	.cta-wrapper a {
+		font-size: clamp(23px, 5vw, 60px);
+		font-weight:600;
+		text-transform:uppercase;
+	}
+
+		@media screen and (max-width:1080px){
+			.cta .cta-wrapper > div {
+			flex-direction:column;
+				text-align:center;
+			}
+			.cta-content h3 { 
+				font-size:41px;	
+			}
+			.cta { 
+			background-position:left;	
+			}
+		}
+	
+	
+	.footer {
+    padding: 8rem 0 0;
+    background: var(--dark);
+    color: black;
+}
+
+.footer-wrapper {
+    display:grid;
+	grid-template-columns:1.5fr 2fr;
+	align-items:start;
+	grid-gap:200px;
+}
+	
+	.footerLinksPage {
+		display:flex;
+		gap:100px;
+	}
+
+.footer-item h3 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+	font-size: 18px;
+	font-weight:400;
+	color:black;
+}
+
+	.footer-item p {
+		font-size:24px;
+	}
+	
+.footer-item ul li {
+    margin-bottom: 5px;
+}
+
+.footer-item ul li a {
+    font-size: 14px;
+	color:black;
+}
+
+.footer-item ul li a:hover {
+    text-decoration: underline;
+}
+	@media screen and (max-width:1020px) {
+		.footer-wrapper{
+			grid-template-columns:1fr;
+			grid-gap:45px;
+		}
+	}
+	@media screen and (max-width:780px){
+			.footerLinksPage {
+			flex-direction:column;
+			gap:0;
+		}
+	}
+	
+	#qodef-page-footer-top-area {
+		display:none !important;
+	}
+	
+	.qodef-icon-list-item.qodef-icon--title-only .qodef-e-title .qodef-e-title-inner{
+		border: 1px solid black !important;
+		color:black !important;
+	}
+	.qodef-icon-list-item.qodef-icon--title-only .qodef-e-title:hover .qodef-e-title-inner{
+		background:black !important;
+		color:white !important;
+	}
+	.qodef-icon-list-item.qodef-icon--title-only .qodef-e-title:hover .qodef-e-title-inner .qodef-e-title-text{
+		color:white !important;
+	}
+	
+	.customFooterwrapper {
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+	@media screen and (max-width:960px){
+		.customFooterwrapper { 
+			flex-wrap:wrap;	
+		}
+		.customFooterItem {
+			margin-bottom:20px;
+		}
+	}
+	
+	.filter {
+		color:black;
+	}
+	
+	.supplier-category-item.btn{
+		color:black !important;
+		border:1px solid black !important;
+		margin:10px;
+		display:block;
+		width: max-content;
+		
+	}
+	.supplier-category-item.btn.active {
+		background-color:black;
+		color:white !important;
+	}
+	.supplier-category-item.btn:hover{
+		background:black;
+		color:white !important;
+	}
+	@media screen and (max-width:680px){
+		span.supplier-category-item.btn{
+			font-size:12px;
+			width:100%;
+			margin: 5px 0;
+		}
+	}  
+	.supplier-category-list {
+		display:ruby;
+	}
+	
+	.supplierItem {
+		text-align:center;
+		padding:30px 50px;
+	}
+	@media screen and (max-width:1080px){
+		.supplierItem {
+			padding:20px 10px;
+		}
+	}
+	
+	.supplierItem img{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		object-position:center;
+		 filter: brightness(0.4);
+	}
+	
+	.supplierItem p{
+		opacity:0;
+		transition:0.5s ease-in-out;
+	}
+	
+	.supplierItem h3 {
+		transform:translatey(160px);
+		transition:0.3s ease-in-out;
+	}
+	.supplierMain a.btn.visit {
+		color:black;
+		border:1px solid black;
+		margin-top: 20px;
+		display:block;
+		width:max-content;
+	}
+	.supplierMain a.btn.visit:hover {
+		color:white !important;
+		background:black;
+	}
+	.supplierMain {
+		display:none !important;
+	}
+	.supplierMain.active {
+	    display: block !important;
+	}
+	.supplierMain.filtered {
+		display: block !important;
+	}
+	.supplierSlider {
+		display:flex;
+	}
+	.filterList.disable {
+		pointer-events:none;
+		opacity:.5;
+	}
+	.supplierItem:hover h3 {
+		transform:translatey(0);
+		transition:0.3s ease-in-out;
+	}
+	
+	.supplierItem:hover p {
+		opacity: 1;
+		transition:0.5s ease-in-out;
+		transition-delay:0.3s;
+	}
+	.supplierInfo {
+		position:relative;
+	}
+	.supplierInfo .tns-controls button:first-child {
+		position:absolute;
+		top:50%;
+		left:20px;
+		transform:translatey(-50%);
+		z-index:1;
+	}
+	.supplierInfo .tns-controls button:last-child {
+		position:absolute;
+		top:50%;
+		right:20px;
+		transform:translatey(-50%);
+		z-index:1;
+	}
+	.suppDetails {
+		position:absolute;
+		bottom: 50px;
+		left:50%;
+		transform: translatex(-50%);
+	}
+	@media screen and (max-width:1080px){
+		.suppDetails a{
+			font-size:16px;
+		}
+	}
+		.supplierItem {
+		min-height:547px;
+	}
+</style>
+<?php get_header() ?>
+
+<!-- 	<div class="customHeader" style="">
+		<div class="customContainer">
+			<div class="customHeaderWrapper">
+				<a href="<?php /* echo home_url();*/ ?>">
+					<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/04/LOGOBLACH.svg" atl="themainlogo">
+				</a>
+				<div class="flex" style="align-items:center;gap: 40px">
+					<a href="<?php /* echo home_url() */ ?>/wedding-enquiries">
+						<button class="btn weddingBtn" style="color:black;border:1px solid black" value="">CONTACT US</button>					
+					</a>
+					
+					<a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--predefined qodef-fullscreen-menu-opener" style="z-index: 999">
+					<span class="qodef-m-icon qodef--open">
+						<svg class="qodef-svg--menu-cross" fill="black" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="currentColor"><rect y="9" width="21" height="3"></rect><rect x="9" width="3" height="21"></rect></svg>	</span>
+							<span class="qodef-m-icon qodef--close">
+							<svg class="qodef-svg--close" xmlns="http://www.w3.org/2000/svg" width="16.9706" height="16.9706" viewBox="0 0 16.9706 16.9706" fill="currentColor"><rect x="-2.0147" y="6.9853" width="21" height="3" transform="translate(-3.5147 8.4853) rotate(-45)"></rect><rect x="6.9853" y="-2.0147" width="3" height="21" transform="translate(-3.5147 8.4853) rotate(-45)"></rect></svg>		</span>
+					</a>
+				</div>
+			
+			</div>
+		</div>
+	</div> -->
+
+	 <?php echo do_shortcode('[customMcHeader]') ?>
+	
+
+	<div class="singleStudiobanner">
+		<img src="<?php echo the_post_thumbnail_url(); ?>" alt="Description of image">
+		<div class="bannerTitle">
+			<h1 style="text-transform:uppercase">
+				<?php the_title(); ?>
+			</h1>
+			
+		</div>
+		<div class="bannerContact">
+			<div class="customContainer">
+				<div class="wrapper flex" style="gap:100px">
+					<p style="font-size:15px;line-height:17px;">
+						<?php the_field('studio_address') ?>
+					</p>
+					<p style="font-size:15px;line-height:17px;">
+						GET IN TOUCH AND<br> LET'S START PLANNING <br> YOUR WEDDING, YOUR WAY. 
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php the_content(); ?>
+
+	<div class="filter" style="padding:60px 0">
+		<div class="customContainer">
+			<h4 style="font-size:22px;color:black;">
+				FILTER
+			</h4>
+			<div class="filterWrapper">
+			<div class="supplier-category-list">
+				<span id="filterAllBtn" class="supplier-category-item btn active">All</span>
+				<?php 
+				$terms = get_terms( array(
+					'taxonomy' => 'supplier-category',
+					'hide_empty' => false,
+				));
+
+				if ( $terms && ! is_wp_error( $terms ) ) {
+					foreach ( $terms as $term ) {
+						echo '<span class="supplier-category-item btn filter-btn filterList" data-term="' . esc_html( $term->slug ) . '">' . esc_html( $term->name ) . '</span>';
+					}
+				} else {
+					echo '<p>No supplier categories found.</p>';
+				}
+				?>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="supplier-results" class="supplierInfo" style="padding:60px 0">
+		<div class="customContainer">
+			<div style="display:flex;align-items:center;gap:10px;">
+				<div>
+					<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/04/cursor-click.png" alt="">
+				</div>
+				<p style="color:black;font-size:25px;">
+					HOVER TO REVEAL INFORMATION
+				</p>
+			</div>
+			<div class="supplierSlider">
+				<?php 
+						$term = "yes";
+								$args = array(
+								'post_type' => 'supplier',
+								'posts_per_page' => -1,
+									'tax_query'      => array(
+										array(
+											'taxonomy' => 'is-wedding-supplier',
+											'field'    => 'slug',
+											'terms'    => $term,
+										),
+									),
+								);
+								$newQuery = new WP_Query($args);
+				?>
+
+				<?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
+				
+				<div class="supplierMain active <?php echo implode(', ', wp_list_pluck(get_the_terms(get_the_ID(), 'supplier-category'), 'slug')); ?>" data-linkset="<?php echo implode(', ', wp_list_pluck(get_the_terms(get_the_ID(), 'supplier-category'), 'slug')); ?>">
+					
+					<div class="supplierItem" style="position:relative">
+						<img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
+						<div style="z-index:1;position:relative;height:95%;">
+							<h3>
+								<?php the_title(); ?>
+							</h3> 
+							<div style="margin-bottom:20px;min-height:180px;display:grid;place-items:center">
+								<div>
+									<?php the_content();?>
+								</div>
+							</div>
+							<div class="suppDetails" style="display:grid;place-items:center;text-align:center">
+								<?php 
+									$mobileNumber = get_field('mobile_number');
+										if ($mobileNumber !== ""){
+								?>
+								<a href="tel:<?php echo $mobileNumber; ?>" class="btn" style="display:block;width:max-content;"><?php echo $mobileNumber; ?></a> <br>
+								<?php } ?>
+								<?php 
+									$theEmail = get_field('email');
+										if ($theEmail !== ""){
+								?>
+								<a href="mailto:<?php echo $theEmail; ?>" class="btn" style="display:block;width:max-content;"><?php echo $theEmail; ?></a>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+					<?php 
+						$websiteLink = get_field('website_link');
+						if ($websiteLink !== ""){
+					?>
+					<a href="<?php echo $websiteLink;  ?>" class="btn visit">VISIT SITE</a>
+					<?php } ?>
+				</div>
+				
+				<?php
+							endwhile;
+							else :
+								echo "no available content yet";
+							endif;
+							wp_reset_postdata();
+				?>	
+			</div>
+		</div>
+	</div>
+
+		<div class="videoSlider">
+		<div class="my-slider-d">
+			
+				<?php 
+						
+							  $theTitle = get_the_title();
+							  $args = array(
+								  'post_type' => 'featured-video',
+								  'posts_per_page' => -1,
+								  'tax_query' => array(
+									  array(
+										  'taxonomy' => 'category',   // change this to your taxonomy name
+										  'field'    => 'slug',              // or 'term_id' if you prefer
+										  'terms'    => $theTitle, // replace with your terms
+									  ),
+								  ),
+							  );
+							  $newQuery = new WP_Query($args)
+						  ?>
+
+						  <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
+			
+				<div>
+					<div class="iframe-container">
+					<iframe style="width:100%; height:100%" 
+						src="https://www.youtube.com/embed/<?php the_field('youtube_video_id') ?>" 
+						title="YouTube video player" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+					</div>
+				</div>
+			
+				 <?php
+							  endwhile;
+							  else :
+							  echo "no available content yet";
+							  endif;
+							  wp_reset_postdata();
+						  ?>
+
+		</div>
+	</div>
+
+	<div class="coupleTestimonials">
+		<h2>Couple Testimonials</h2>
+		<div class="customContainer">
+			<div class="mySliderTestimonial">
+					
+				<?php 
+				  $args = array(
+					  'post_type' => 'couple-testimonial',
+					  'posts_per_page' => -1,
+				  );
+				  $newQuery = new WP_Query($args);
+			  	?>
+
+			  <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
+				<div style="padding:10px;">
+					<div class="sliderItemClientTestimonials">
+					<img src="<?php echo get_the_post_thumbnail_url()?>" alt="">
+					<div class="clientTestimonialsContent">
+						<h3>
+							<?php the_title(); ?> 
+						</h3>
+						<p>
+							"We recently got married at Shoreditch Studios and the whole experience from start to end was great. The team were brilliant and always on hand to help and answer questions and there were loads of those! Weddings can be quite overwhelming so we were firing over a lot of questions, often questions we had already asked and the venue team remained patient with us throughout. The venue is a great blank space for those who want to make a space their own. Wedding venues can be cheesy but Shoreditch Studios allows a couple to be original and creative."
+						</p>
+					</div>
+				</div>
+
+				</div>
+				
+			  <?php
+				  endwhile;
+				  else :
+				  echo "no available content yet";
+				  endif;
+				  wp_reset_postdata();
+			  ?>
+				
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="seperatorNav" style="padding:80px 0;color:black">
+		<div class="customContainer" >
+			
+			<div class="seperatorWrapper flex" style="border-top:1px solid lightgray; justify-content:space-between">
+				<a href="<?php echo home_url() ?>">
+					<div class="" style="gap:20px; align-items:center;display:flex;">
+						<div>
+							<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/04/Group-79-1.png" alt="gripdots" >
+						</div>
+						<h3 style="font-size:24px;color:black">
+							BACK TO HOME
+						</h3>
+					</div>
+				</a>
+				
+					<div class="nextPost" style="align-items:center;gap:30px">
+					<div>
+
+						<a href="<?php echo home_url() ?>/wedding-venues">
+							<h3 style="font-weight:400;text-transform:capitalize;color:black;">
+								See Wedding Venues
+							</h3>
+						</a>
+						
+
+					</div>
+
+						<div class="addWidth arrowSVG arrowMoving">
+							<svg xmlns="http://www.w3.org/2000/svg" width="128" fill="black" height="50" viewBox="0 0 128 50"><rect y="24" width="115" height="2"></rect><path d="M111,13C104,6,99,0,99,0H96s6,11,11,18l5,7-5,7c-5,7-11,18-11,18h3s5-6,12-13c9-9,17-11,17-11V24S120,22,111,13Z"></path></svg>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<section class="cta">
+      <div class="customContainer">
+        <div class="cta-wrapper">
+			<div>
+			  <div class="cta-content">
+				 <img
+			  src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/themainlogopng.png"
+			  alt="shoreditch gallery image"
+			  loading="lazy"
+			/>
+				<h3>
+				  Enquire<br />
+				  Now
+				</h3>
+			  </div>
+				<div>
+					<a href="<?php echo home_url() ?>/wedding-inquiries/" class="btn">Contact Us</a>
+				</div>
+			</div>
+        </div>
+      </div>
+    </section>
+
+	 <?php echo do_shortcode('[customMcFooter]') ?>
+
+	<div class="customFooter" style="padding:40px 0">
+		<div class="customContainer">
+			<div class="customFooterwrapper">
+				<div class="customFooterItem">
+					  <a
+					  class="qodef-shortcode qodef-m qodef-button qodef-layout--textual qodef-button-arrow--no qodef-html--link"
+					  href="mailto:contact@example.com"
+					  target="_self">
+						<span class="qodef-m-inner">
+						  <svg
+							 fill="black"
+							class="qodef-svg--arrow-button-simple"
+							xmlns="http://www.w3.org/2000/svg"
+							width="34.8962"
+							height="15"
+							viewBox="0 0 34.8962 15"
+							fill="currentColor">
+							<rect y="6.25" width="33" height="1.5"></rect>
+							<path
+							  d="M 29.5837 3.64 C 27.3962 1.68 25.8337 0 25.8337 0 h -0.9375 a 60.295 60.295 0 0 0 3.4375 5.04 L 29.8962 7 L 28.3337 8.96 A 60.295 60.295 0 0 0 24.8963 14 h 0.9375 s 1.5625 -1.68 3.75 -3.64 a 13.2224 13.2224 0 0 1 5.3125 -3.08 V 6.72 A 13.2224 13.2224 0 0 1 29.5837 3.64 Z"></path>
+						  </svg>
+						  <span class="qodef-m-text" style="color:black">LINK@SHOREDITCH.COM</span>
+						</span>
+					  </a>
+					  <p style="color:#1A1A1A;font-size:10px;margin:0">
+						©2024 SHOREDITCH LONDON, ALL RIGHTS RESERVED  
+					  </p>
+				</div>
+				<div class="customFooterItem">
+					<div id="einar_core_icon_list_item-4" class="widget widget_einar_core_icon_list_item" data-area="qodef-footer-top-area-column-2"><div class="qodef-icon-list-item qodef-icon--title-only">	<span class="qodef-e-title">					<a itemprop="url" href="https://www.instagram.com/slvenues/" target="_blank">					<span class="qodef-e-title-inner">								<span class="qodef-e-title-text">Instagram</span>			</span>					</a>			</span></div></div>
+					<div id="einar_core_icon_list_item-7" class="widget widget_einar_core_icon_list_item" data-area="qodef-footer-top-area-column-2"><div class="qodef-icon-list-item qodef-icon--title-only">	<span class="qodef-e-title">					<a itemprop="url" href="https://uk.pinterest.com/shoreditchl/" target="_blank">					<span class="qodef-e-title-inner">								<span class="qodef-e-title-text">Pinterest</span>			</span>					</a>			</span></div></div>
+				</div>
+				<div class="customFooterItem">
+					<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/04/LOGOBLACH.svg" alt="footerLogo" >
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+<script>
+	
+		function handleClick(event) {
+		  event.preventDefault(); // Prevents the default behavior of the anchor tag (i.e., jumping to the top of the page)
+		  alert('Button clicked!');
+		}
+	
+		var slider = tns({
+			container: ".my-slider-d",
+			items: 1,
+			slideBy: "page",
+			autoplay: false,
+			autoHeight: true,
+			loop: false,
+			nav: false,
+			controlsText: [
+			  '<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/Group-17.png" alt="" width="60" height="64">',
+			  '<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/Group-15.png" alt="" width="60" height="64">',
+			],
+		  });
+	
+	var sliderTestimonial = tns({
+			container: ".mySliderTestimonial",
+			items: 1,
+			slideBy: "page",
+			autoplay: false,
+			autoHeight: true,
+			loop: false,
+			
+			nav: false,
+			controlsText: [
+			  '<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/Group-17.png" alt="" width="60" height="64">',
+			  '<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/Group-15.png" alt="" width="60" height="64">',
+			],
+			responsive: {
+				768: {
+				  items: 1
+				},
+				1024: {
+				  items: 3,
+					gutter: 20,
+		 	edgePadding: 20,
+				}
+			  }
+		  });
+	
+	const allFilter = document.getElementById('filterAllBtn');
+	const filterList = document.querySelectorAll('.filterList');
+	
+
+	
+	allFilter.addEventListener("click", () => {
+		allFilter.classList.add("active");
+		
+		const mainSupplier = document.querySelectorAll(".supplierMain");
+		mainSupplier.forEach(mainItem => {
+			mainItem.classList.add("active");
+			mainItem.classList.remove("filtered");
+		});
+		
+		filterList.forEach(filterListItem => {
+			filterListItem.classList.remove("active");
+		});
+	})
+	
+	
+		let sliderSupplier;
+let selectedFilters = new Set();
+const sliderContainer = document.querySelector(".supplierSlider");
+const allSlides = Array.from(document.querySelectorAll(".supplierMain"));
+const buttons = document.querySelectorAll(".filter-btn");
+
+
+// Initialize slider
+function initializeSlider() {
+  sliderSupplier = tns({
+    container: ".supplierSlider",
+    items: 1,
+    slideBy: "page",
+    autoplay: false,
+    loop: false,
+    nav: false,
+    controlsText: [
+      '<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/Group-17.png" alt="" width="60" height="64">',
+      '<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/02/Group-15.png" alt="" width="60" height="64">'
+    ],
+    responsive: {
+      1080: {
+        items: 2
+      },
+      1610: {
+        items: 3
+      }
+    }
+  });
+}
+
+// Filter and refresh slider
+function updateSupplierSlider() {
+  // Destroy slider
+  if (sliderSupplier) {
+    sliderSupplier.destroy();
+  }
+
+  // Clear current slides
+  sliderContainer.innerHTML = '';
+
+  // Filter slides
+  const filteredSlides = allSlides.filter(slide => {
+    const itemCategory = slide.dataset.term;
+    return selectedFilters.size === 0 || selectedFilters.has(itemCategory);
+  });
+
+  // Append filtered slides
+  filteredSlides.forEach(slide => {
+    sliderContainer.appendChild(slide);
+  });
+
+  // Reinitialize slider
+  initializeSlider();
+}
+
+// Button event listeners
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+	 btn.classList.toggle("active");
+	 allFilter.classList.remove('active');
+	const mainSupplier = document.querySelectorAll(".supplierMain");
+	  
+	 mainSupplier.forEach(mainItem => {
+		 mainItem.classList.remove('active');
+	 })
+	  
+	mainSupplier.forEach(mainItem => {
+	  if (mainItem.dataset.linkset === btn.dataset.term) {
+		mainItem.classList.toggle("filtered"); // Be sure "yow" is a class name, not a string with punctuation
+	   } 
+	});
+	  
+    const term = btn.dataset.term;
+	  console.log(term);
+
+    // Toggle active filter
+//     if (selectedFilters.has(term)) {
+//       selectedFilters.delete(term);
+//       btn.classList.remove("active");
+//     } else {
+//       selectedFilters.add(term);
+//       btn.classList.add("active");
+//     }
+
+//     updateSupplierSlider();
+  });
+});
+
+// Initial run
+initializeSlider();
+
+</script>
+
+<?php get_footer() ?>

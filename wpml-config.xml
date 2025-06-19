@@ -1,0 +1,314 @@
+<wpml-config>
+	<elementor-widgets>
+		<widget name="einar_core_icon">
+			<fields>
+				<field>link</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_author_info">
+			<fields>
+				<field>author_username</field>
+				<field>author_custom_link</field>
+				<field>author_custom_description</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_button">
+			<fields>
+				<field>text</field>
+				<field>link</field>
+				<field>input_name</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_dual_image_portfolio_slider">
+			<fields>
+				<field>fixed_text_one</field>
+				<field>copyright_text</field>
+				<field>button_left_text</field>
+				<field>button_left_link</field>
+				<field>button_right_text</field>
+				<field>button_right_link</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_portfolio_interactive_showcase">
+			<fields>
+				<field>read_more_text</field>
+				<field>read_more_link</field>
+				<field>fixed_text_one</field>
+				<field>fixed_text_two</field>
+				<field>fixed_text_two_link</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_team_list">
+			<fields>
+				<field>slider_more_link</field>
+				<field>slider_more_text</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_testimonials_list">
+			<fields>
+				<field>static_title</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_accordion_child">
+			<fields>
+				<field>title</field>
+				<field>layout</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_animated_text_image_slider">
+			<fields>
+				<field>fixed_text_top</field>
+				<field>fixed_text_bottom</field>
+			</fields>
+			<fields-in-item items_of="children">
+				<field>item_link</field>
+				<field>info_title</field>
+				<field>info_title_superscript</field>
+				<field>info_description</field>
+				<field>info_title_bottom</field>
+				<field>info_title_bottom_two</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_banner">
+			<fields>
+				<field>link_url</field>
+				<field>title</field>
+				<field>subtitle</field>
+				<field>text_field</field>
+				<field>text</field>
+				<field>input_name</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_countdown">
+			<fields>
+				<field>week_label</field>
+				<field>week_label_plural</field>
+				<field>day_label</field>
+				<field>day_label_plural</field>
+				<field>hour_label</field>
+				<field>hour_label_plural</field>
+				<field>minute_label</field>
+				<field>minute_label_plural</field>
+				<field>second_label</field>
+				<field>second_label_plural</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_counter">
+			<fields>
+				<field>start_digit</field>
+				<field>end_digit</field>
+				<field>step_digit</field>
+				<field>step_delay</field>
+				<field>digit_label</field>
+				<field>title</field>
+				<field>text</field>
+				<field>appear_delay</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_custom_font">
+			<fields>
+				<field>title</field>
+				<field>link</field>
+				<field>type_out_position</field>
+				<field>typed_ending_1</field>
+				<field>typed_ending_2</field>
+				<field>typed_ending_3</field>
+				<field>typed_ending_4</field>
+				<field>highlight_position</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_dropcaps">
+			<fields>
+				<field>letter</field>
+				<field>text</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_event_agenda">
+			<fields>
+				<field>heading_one</field>
+				<field>heading_two</field>
+				<field>heading_three</field>
+				<field>heading_four</field>
+			</fields>
+			<fields-in-item items_of="children">
+				<field>item_title</field>
+				<field>time</field>
+				<field>location</field>
+				<field>speaker</field>
+				<field>link</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_google_map">
+			<fields>
+				<field>address1</field>
+				<field>address2</field>
+				<field>address3</field>
+				<field>address4</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_highlight">
+			<fields>
+				<field>text</field>
+				<field>highlight_position</field>
+				<field>link</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_icon_list_item">
+			<fields>
+				<field>link</field>
+				<field>title</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_icon_with_text">
+			<fields>
+				<field>link</field>
+				<field>svg</field>
+				<field>title</field>
+				<field>text</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_image_marquee">
+			<fields>
+				<field>duration</field>
+			</fields>
+			<fields-in-item items_of="children">
+				<field>item_image_link</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_image_with_text">
+			<fields>
+				<field>link</field>
+				<field>title</field>
+				<field>text</field>
+				<field>button_text</field>
+				<field>button_link</field>
+				<field>appear_delay</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_interactive_banners">
+			<fields-in-item items_of="children">
+				<field>number</field>
+				<field>title</field>
+				<field>description_1</field>
+				<field>description_2</field>
+				<field>description_3</field>
+				<field>link</field>
+				<field>additional_link_text</field>
+				<field>additional_link</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_interactive_link_showcase">
+			<fields-in-item items_of="children">
+				<field>item_link</field>
+				<field>item_title</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_list_item">
+			<fields>
+				<field>link</field>
+				<field>number</field>
+				<field>title</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_pricing_items">
+			<fields>
+				<field>title</field>
+				<field>price</field>
+				<field>period</field>
+				<field>currency</field>
+				<field>content</field>
+				<field>text</field>
+				<field>link</field>
+				<field>input_name</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_pricing_table">
+			<fields>
+				<field>title</field>
+				<field>price</field>
+				<field>currency</field>
+				<field>content</field>
+				<field>text</field>
+				<field>link</field>
+				<field>input_name</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_progress_bar">
+			<fields>
+				<field>custom_shape</field>
+				<field>duration</field>
+				<field>number</field>
+				<field>title</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_section_title">
+			<fields>
+				<field>title</field>
+				<field>title_link</field>
+				<field>info_text</field>
+				<field>text</field>
+				<field>link</field>
+				<field>input_name</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_service_list">
+			<fields>
+				<field>label</field>
+				<field>button_text</field>
+				<field>button_link</field>
+			</fields>
+			<fields-in-item items_of="children">
+				<field>item_title</field>
+				<field>text_1</field>
+				<field>text_2</field>
+				<field>link</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_single_image">
+			<fields>
+				<field>link</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_swapping_image_gallery">
+			<fields>
+				<field>info_title</field>
+				<field>info_description</field>
+			</fields>
+			<fields-in-item items_of="children">
+				<field>item_link</field>
+				<field>thumbnail_text</field>
+				<field>thumbnail_text_label</field>
+			</fields-in-item>
+		</widget>
+		<widget name="einar_core_tabs_child">
+			<fields>
+				<field>tab_title</field>
+				<field>layout</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_text_marquee">
+			<fields>
+				<field>text_1</field>
+				<field>text_2</field>
+				<field>text_3</field>
+				<field>separator</field>
+				<field>duration</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_video_button">
+			<fields>
+				<field>video_link</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_video_holder">
+			<fields>
+				<field>video_source</field>
+			</fields>
+		</widget>
+		<widget name="einar_core_social_share">
+			<fields>
+				<field>title</field>
+			</fields>
+		</widget>
+	</elementor-widgets>
+</wpml-config>

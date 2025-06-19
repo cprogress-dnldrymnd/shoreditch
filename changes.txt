@@ -1,0 +1,37 @@
+1.3
+- Added WPML config file
+- Updated Einar Core to 1.3
+- Updated FontAwesome icons pack to 6.6
+- Updated Search template helper functions
+- Improved PHP 8.3 compatibility
+- Improved Parallax Background functionality
+- Improved pagination helper functions
+- Improved back to top scrolling
+- Fixed Animated Text Image Slider with new Swiper Library
+- Fixed Portfolio Interactive Showcase slider for Swiper version 8
+- Minor fixes
+
+1.2
+- Updated Einar Core to 1.2
+- Updated font awesome to 6.5.2
+- Fixed font awesome twitter x icon
+- Changed svg twitter icon to twitter x icon
+
+1.1
+- Added WordPress 6.6.1 compatibility
+- Added WooCommerce 9.2.3 compatibility
+- Added readme.txt file in theme
+- Added Requires and Tested up tags
+- Added QODE Wishlist for WooCommerce to plugins activation
+- Added QODE Quick View for WooCommerce to plugins activation
+- Added support for QODE Wishlist & Quick View plugins
+- Updated Einar Core to 1.1
+- Updated Qode Framework to 1.2.4
+- Improved Google Maps API loading
+- Fixed WooCommerce empty cart css
+- Fixed Google Maps async loading
+- Fixed Google Maps deprecated google.maps.Marker
+- Fix swiper function call in elementor so it doesn't get called unnecessarily
+- Fixed elementor container/section options not working when Elementor Element Caching is enabled
+- Removed unnecessary console.log
+- Optimized theme screenshot.png image
