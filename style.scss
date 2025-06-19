@@ -12,6 +12,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 .custom-menu {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;;
+        li {
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
     svg {
         display: none;
     }
