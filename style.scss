@@ -10,11 +10,14 @@ Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-.custom-menu svg {
-  display: none; }
+
+.custom-menu {
+    svg {
+        display: none;
+    }
+}
 
 li#wp-admin-bar-einar-core-menu-admin-bar-options,
 #einar_core_side_area_opener-2 {
-  display: none !important; }
-
-/*# sourceMappingURL=style.css.map */
+    display: none !important;
+}

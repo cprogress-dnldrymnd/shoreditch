@@ -432,19 +432,6 @@ function action_admin_head()
 add_action('admin_head', 'action_admin_head');
 
 
-function action_wp_head()
-{
-?>
-	<style>
-		li#wp-admin-bar-einar-core-menu-admin-bar-options,
-		#einar_core_side_area_opener-2 {
-			display: none !important;
-		}
-	</style>
-<?php
-}
-add_action('wp_head', 'action_wp_head');
-
 function elementor_template($atts)
 {
     extract(
