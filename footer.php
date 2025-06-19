@@ -12,6 +12,8 @@
 	// Hook to include additional content before body tag closed
 	do_action( 'einar_action_before_body_tag_close' );
 	?>
+
+	<?= do_shortcode('[elementor_template id=7729]') ?>
 	<script
 		  src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.min.js"
 		  integrity="sha512-sfTO4Pp4bdGjTlI1WZZ7zqcbBIo4NY51k1Gr99l1ezQIRboEqAbCNegL3vP65zQwP6aJjqqdDm1GPULlqp94Qw=="
