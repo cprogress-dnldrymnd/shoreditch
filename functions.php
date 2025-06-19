@@ -410,3 +410,52 @@ if ( ! class_exists( 'Einar_Handler' ) ) {
 
 	Einar_Handler::get_instance();
 }
+
+
+
+//** New functions */
+function action_admin_head()
+{
+?>
+	<style>
+		#toplevel_page_qi_blocks_setup_wizard,
+		#toplevel_page_qi_addons_for_elementor_welcome,
+		#toplevel_page_einar_core_dashboard,
+		#toplevel_page_qode_woocommerce_general_menu,
+		#toplevel_page_qode_optimizer_general_menu,
+		#toplevel_page_einar_core_menu {
+			display: none !important;
+		}
+	</style>
+<?php
+}
+add_action('admin_head', 'action_admin_head');
+
+
+function action_wp_head()
+{
+?>
+	<style>
+		li#wp-admin-bar-einar-core-menu-admin-bar-options,
+		#einar_core_side_area_opener-2 {
+			display: none !important;
+		}
+	</style>
+<?php
+}
+add_action('wp_head', 'action_wp_head');
+
+function elementor_template($atts)
+{
+    extract(
+        shortcode_atts(
+            array(
+                'id' => '',
+            ),
+            $atts
+        )
+    );
+    return \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($id);
+}
+
+add_shortcode('elementor_template', 'elementor_template');
