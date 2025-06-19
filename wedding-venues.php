@@ -961,48 +961,6 @@
       </div>
     </section>
 
-	 <?php echo do_shortcode('[customMcFooter]') ?>
-
-
-	<div class="customFooter" style="padding:40px 0">
-		<div class="customContainer">
-			<div class="customFooterwrapper">
-				<div class="customFooterItem">
-					  <a
-					  class="qodef-shortcode qodef-m qodef-button qodef-layout--textual qodef-button-arrow--no qodef-html--link"
-					  href="mailto:contact@example.com"
-					  target="_self">
-						<span class="qodef-m-inner">
-						  <svg
-							 fill="black"
-							class="qodef-svg--arrow-button-simple"
-							xmlns="http://www.w3.org/2000/svg"
-							width="34.8962"
-							height="15"
-							viewBox="0 0 34.8962 15"
-							fill="currentColor">
-							<rect y="6.25" width="33" height="1.5"></rect>
-							<path
-							  d="M 29.5837 3.64 C 27.3962 1.68 25.8337 0 25.8337 0 h -0.9375 a 60.295 60.295 0 0 0 3.4375 5.04 L 29.8962 7 L 28.3337 8.96 A 60.295 60.295 0 0 0 24.8963 14 h 0.9375 s 1.5625 -1.68 3.75 -3.64 a 13.2224 13.2224 0 0 1 5.3125 -3.08 V 6.72 A 13.2224 13.2224 0 0 1 29.5837 3.64 Z"></path>
-						  </svg>
-						  <span class="qodef-m-text" style="color:black">LINK@SHOREDITCH.COM</span>
-						</span>
-					  </a>
-					  <p style="color:#1A1A1A;font-size:10px;margin:0">
-						©2024 SHOREDITCH LONDON, ALL RIGHTS RESERVED  
-					  </p>
-				</div>
-				<div class="customFooterItem">
-					<div id="einar_core_icon_list_item-4" class="widget widget_einar_core_icon_list_item" data-area="qodef-footer-top-area-column-2"><div class="qodef-icon-list-item qodef-icon--title-only">	<span class="qodef-e-title">					<a itemprop="url" href="https://www.instagram.com/slvenues/" target="_blank">					<span class="qodef-e-title-inner">								<span class="qodef-e-title-text">Instagram</span>			</span>					</a>			</span></div></div>
-					<div id="einar_core_icon_list_item-7" class="widget widget_einar_core_icon_list_item" data-area="qodef-footer-top-area-column-2"><div class="qodef-icon-list-item qodef-icon--title-only">	<span class="qodef-e-title">					<a itemprop="url" href="https://uk.pinterest.com/shoreditchl/" target="_blank">					<span class="qodef-e-title-inner">								<span class="qodef-e-title-text">Pinterest</span>			</span>					</a>			</span></div></div>
-				</div>
-				<div class="customFooterItem">
-					<img src="https://shoreditch.theprogressteam.com/wp-content/uploads/2025/04/LOGOBLACH.svg" alt="footerLogo" >
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>

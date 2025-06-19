@@ -1054,8 +1054,6 @@
     </section>
 
 
-	<?php echo do_shortcode('[customMcFooter]') ?>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
 
 	<script>

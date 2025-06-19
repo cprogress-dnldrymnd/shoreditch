@@ -156,7 +156,6 @@ einar_template_part( 'content', 'templates/content', '404' );
 
 ?>
 
-   <?php echo do_shortcode('[customMcFooter]') ?>
 <?php
 
 get_footer();
