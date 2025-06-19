@@ -23,4 +23,7 @@ li#wp-admin-bar-einar-core-menu-admin-bar-options,
 #einar_core_side_area_opener-2 {
   display: none !important; }
 
+.mb-0.mb-0 {
+  margin-bottom: 0 !important; }
+
 /*# sourceMappingURL=style.css.map */
