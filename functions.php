@@ -459,3 +459,86 @@ function elementor_template($atts)
 }
 
 add_shortcode('elementor_template', 'elementor_template');
+
+
+
+/**
+ * Adds a shortcode to display a WordPress navigation menu.
+ *
+ * Usage:
+ * [dynamic_menu menu_id="2" container_class="my-custom-menu-container"]
+ * [dynamic_menu menu_slug="main-menu" menu_class="footer-nav"]
+ * [dynamic_menu menu_name="Top Navigation"]
+ *
+ * @param array $atts Shortcode attributes.
+ * @return string The HTML output of the navigation menu.
+ */
+function dynamic_menu_shortcode( $atts ) {
+    // Define default attributes
+    $atts = shortcode_atts(
+        array(
+            'menu_id'         => '',   // Numeric ID of the menu
+            'menu_slug'       => '',   // Slug of the menu (e.g., 'main-navigation')
+            'menu_name'       => '',   // Name of the menu (e.g., 'Main Menu')
+            'container'       => 'div', // Tag name for the nav menu's container.
+            'container_class' => 'dynamic-menu-container', // Class for the nav menu's container.
+            'menu_class'      => 'dynamic-menu',     // Class for the ul element.
+            'echo'            => false, // Set to false to return the menu as a string.
+            'fallback_cb'     => false, // Do not display a fallback page list if menu is not found.
+            'depth'           => 0,    // How many levels of the menu to display. 0 means all.
+        ),
+        $atts,
+        'dynamic_menu'
+    );
+
+    $menu_args = array(
+        'echo'            => (bool) $atts['echo'],
+        'container'       => $atts['container'],
+        'container_class' => esc_attr( $atts['container_class'] ),
+        'menu_class'      => esc_attr( $atts['menu_class'] ),
+        'fallback_cb'     => $atts['fallback_cb'],
+        'depth'           => intval( $atts['depth'] ),
+    );
+
+    // Prioritize menu_id, then menu_slug, then menu_name
+    if ( ! empty( $atts['menu_id'] ) ) {
+        $menu_args['menu'] = intval( $atts['menu_id'] ); // Use numeric ID
+    } elseif ( ! empty( $atts['menu_slug'] ) ) {
+        $menu_args['menu'] = sanitize_title( $atts['menu_slug'] ); // Use slug
+    } elseif ( ! empty( $atts['menu_name'] ) ) {
+        $menu_args['menu'] = sanitize_text_field( $atts['menu_name'] ); // Use name
+    } else {
+        // If no menu identifier is provided, return an empty string or an error message.
+        return '<!-- dynamic_menu shortcode: No menu ID, slug, or name provided. -->';
+    }
+
+    // Check if the menu exists before trying to display it
+    $menu_exists = false;
+    if ( is_nav_menu( $menu_args['menu'] ) ) {
+        $menu_exists = true;
+    } else {
+        // If menu was specified by ID/slug/name, try to get its object to verify existence.
+        $menu_object = wp_get_nav_menu_object( $menu_args['menu'] );
+        if ( $menu_object && ! is_wp_error( $menu_object ) ) {
+            $menu_exists = true;
+            // Ensure the menu argument is the ID if we found it by slug/name
+            $menu_args['menu'] = $menu_object->term_id;
+        }
+    }
+
+    if ( $menu_exists ) {
+        return wp_nav_menu( $menu_args );
+    } else {
+        // Return a comment indicating the menu was not found.
+        // This is useful for debugging in the page source.
+        return '<!-- dynamic_menu shortcode: Menu "' . esc_attr( $menu_args['menu'] ) . '" not found. -->';
+    }
+}
+
+/**
+ * Register the shortcode.
+ *
+ * 'dynamic_menu' is the shortcode tag that users will type in.
+ * 'dynamic_menu_shortcode' is the function that will be executed when the shortcode is found.
+ */
+add_shortcode( 'dynamic_menu', 'dynamic_menu_shortcode' );
